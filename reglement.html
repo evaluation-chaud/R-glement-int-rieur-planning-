@@ -71,32 +71,11 @@
   @media (max-width: 480px) {
     img.logo { max-width: 100px; }
   }
-  h2.section-title.collapsible,
-  h3.article-title.collapsible {
-    cursor: pointer;
+  h2.section-title, h3.article-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    user-select: none;
-    transition: background 0.15s ease;
-  }
-  h3.article-title.collapsible:hover { background: #fdf3e4; }
-  h2.section-title.collapsible:hover { background: #e4eaf1; }
-  .chevron {
-    flex-shrink: 0;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: #f0a13a;
-    transition: transform 0.25s ease;
-    display: inline-block;
-  }
-  h2.section-title.collapsible .chevron { color: #fff; background: #0d3b66; border-radius: 50%; width: 26px; height: 26px; line-height: 26px; text-align: center; font-size: 0.95rem; }
-  .collapsible.open .chevron {
-    transform: rotate(90deg);
-  }
-  .collapsible-content {
-    display: none;
   }
   h1.main-title {
     color: #0d3b66;
@@ -158,45 +137,12 @@
   }
   p { margin: 0 0 12px; }
   p:last-child { margin-bottom: 0; }
-  ul, ol {
+  ul {
     margin: 10px 0;
     padding-left: 22px;
   }
   li { margin-bottom: 9px; }
   li:last-child { margin-bottom: 0; }
-  .formula {
-    background: #fdf3e4;
-    border-left: 4px solid #f0a13a;
-    padding: 14px 18px;
-    border-radius: 8px;
-    font-weight: 700;
-    color: #0d3b66;
-    margin: 14px 0;
-    text-align: center;
-    font-size: 1.05rem;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 16px 0;
-    font-size: 0.92rem;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  th {
-    background: #0d3b66;
-    color: #fff;
-    padding: 11px 10px;
-    text-align: left;
-    font-weight: 700;
-  }
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #edeef0;
-    color: #3a3f47;
-  }
-  tr:nth-child(even) td { background: #f6f8fa; }
-  .mention-tb { color: #b3261e; font-weight: 700; }
   footer {
     margin-top: 50px;
     text-align: center;
@@ -210,7 +156,7 @@
 </head>
 <body>
 
-  <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
+  <button class="lang-toggle" id="langToggle">EN</button>
 
   <div class="logo-wrap">
     <img class="logo" src="sonatrach_logo.png" alt="Sonatrach Logo">
@@ -228,7 +174,7 @@
 
   <h2 class="section-title">I. INTRODUCTION</h2>
   <div class="card">
-    <p>Votre passage en vue d'une formation à l'Institut Algérien du Pétrole, IAP, vise à vous faire acquérir des connaissances et développer des compétences qui vous permettront d'être plus performant en poste de travail. Pour cela, vous êtes astreint à la rigueur dans l'application stricte et sans réserve du présent règlement intérieur.</p>
+    <p>Votre passage en vue d'une formation à l'Institut Algérien du Pétrole, IAP, vise à vous faire acquérir des connaissances et développer des compétences qui vous permettront d'être plus performant en poste de travail. Pour cela, vous êtes astreint à la rigueur dans l'application stricته و بدون تحفظ للتنظيم الداخلي الحالي.</p>
   </div>
 
   <h2 class="section-title">II. VOLET PÉDAGOGIE</h2>
@@ -255,7 +201,7 @@
     <p>Un programme de formation est un ensemble de phases regroupant plusieurs enseignements théoriques et/ou pratiques, des stages, et/ou une mise en situation professionnelle.</p>
     <p>Un module est un ensemble de cours théoriques et/أو pratiques dont le volume horaire est de 12 heures au moins. Plusieurs modules peuvent former un parcours de formation.</p>
     <p>Les modules sont dispensés en séance d'une durée de 1H30 suivi d'une pause de 15 minutes maximum.</p>
-    <p>La journée is organisée en quatre séances. Les horaires sont définis par la Sous-Direction des Études de l'École.</p>
+    <p>La journée est organized في أربع حصص. المواقيت محددة من طرف المديرية الفرعية للدراسات بالمدرسة.</p>
     <p>Le volume horaire hebdomadaire moyen alloué à la formation est complet.</p>
   </div>
 
