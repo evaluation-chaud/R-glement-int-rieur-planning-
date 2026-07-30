@@ -6,171 +6,57 @@
 <title>Règlement Intérieur IAP</title>
 <style>
   * { box-sizing: border-box; }
-  body {
-    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 30px 22px 70px;
-    color: #2b2f36;
-    background: #faf8f4;
-    line-height: 1.8;
-    font-size: 1.02rem;
-  }
-  .lang-toggle {
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 100;
-    background: #0d3b66;
-    color: #fff;
-    border: none;
-    font-family: inherit;
-    font-weight: 800;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    padding: 10px 18px;
-    border-radius: 999px;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(13, 59, 102, 0.35);
-    transition: transform 0.15s ease, background 0.15s ease;
-  }
-  .lang-toggle:hover { background: #123a6b; transform: translateY(-2px); }
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 25px;
-    color: #0d3b66;
-    background: #eef2f6;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    padding: 9px 16px;
-    border-radius: 999px;
-  }
+  body { font-family: 'Segoe UI', sans-serif; max-width: 880px; margin: 0 auto; padding: 30px 22px 70px; color: #2b2f36; background: #faf8f4; line-height: 1.8; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 25px; color: #0d3b66; background: #eef2f6; text-decoration: none; padding: 9px 16px; border-radius: 999px; font-weight: bold; }
   .logo-wrap { text-align: center; margin-bottom: 10px; }
-  img.logo { max-width: 130px; width: 100%; height: auto; }
-  h1.main-title { color: #0d3b66; font-size: 1.75rem; font-weight: 800; text-align: center; margin-bottom: 8px; }
-  .subtitle { text-align: center; color: #d9730d; font-weight: 700; margin-bottom: 8px; }
-  .year { text-align: center; color: #8a8f98; margin-bottom: 30px; font-size: 0.95rem; }
-  .divider { width: 80px; height: 4px; background: #f0a13a; border-radius: 2px; margin: 0 auto 35px; }
-
-  /* العناوين القابلة للضغط والتمديد */
-  .collapsible {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    user-select: none;
-  }
-  h2.section-title {
-    color: #0d3b66; background: #eef2f6; border-left: 6px solid #0d3b66;
-    padding: 14px 20px; border-radius: 10px; font-size: 1.25rem; font-weight: 800; margin-top: 25px; margin-bottom: 10px;
-  }
-  h3.article-title {
-    color: #0d3b66; border-bottom: 2px solid #f0a13a; padding-bottom: 8px;
-    font-size: 1.1rem; font-weight: 700; margin-top: 20px; margin-bottom: 10px;
-  }
-  .chevron {
-    font-size: 0.9rem; color: #f0a13a; transition: transform 0.2s ease;
-  }
-  h2.section-title .chevron {
-    color: #fff; background: #0d3b66; border-radius: 50%; width: 24px; height: 24px;
-    display: flex; align-items: center; justify-content: center; font-size: 0.75rem;
-  }
-  
-  /* إخفاء المحتوى افتراضياً وتنسيق الكروت */
-  .collapsible-content {
-    display: none; padding: 5px 10px;
-  }
-  .card {
-    background: #ffffff; border: 1px solid #eef0f2; border-left: 4px solid #f0a13a;
-    border-radius: 12px; padding: 20px 24px; box-shadow: 0 2px 10px rgba(13, 59, 102, 0.05); margin-bottom: 15px;
-  }
-  .active-header .chevron {
-    transform: rotate(90deg);
-  }
-  ul, ol { margin: 10px 0; padding-left: 22px; }
-  li { margin-bottom: 9px; }
-  footer { margin-top: 50px; text-align: center; font-size: 0.98rem; color: #0d3b66; border-top: 1px solid #e5e5e5; padding-top: 20px; }
+  img.logo { max-width: 130px; height: auto; }
+  h1.main-title { color: #0d3b66; font-size: 1.75rem; font-weight: 800; text-align: center; }
+  .subtitle { text-align: center; color: #d9730d; font-weight: 700; }
+  .divider { width: 80px; height: 4px; background: #f0a13a; margin: 0 auto 35px; }
+  .collapsible { cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; user-select: none; }
+  h2.section-title { color: #0d3b66; background: #eef2f6; border-left: 6px solid #0d3b66; padding: 14px 20px; border-radius: 10px; font-size: 1.25rem; font-weight: 800; margin-top: 25px; }
+  h3.article-title { color: #0d3b66; border-bottom: 2px solid #f0a13a; padding-bottom: 8px; font-size: 1.1rem; font-weight: 700; margin-top: 20px; }
+  .chevron { font-size: 0.9rem; color: #f0a13a; transition: transform 0.2s; }
+  h2.section-title .chevron { color: #fff; background: #0d3b66; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; }
+  .collapsible-content { display: none; padding: 5px 10px; }
+  .card { background: #ffffff; border-left: 4px solid #f0a13a; border-radius: 12px; padding: 20px 24px; box-shadow: 0 2px 10px rgba(13, 59, 102, 0.05); margin-bottom: 15px; }
+  .active-header .chevron { transform: rotate(90deg); }
+  footer { margin-top: 50px; text-align: center; color: #0d3b66; border-top: 1px solid #e5e5e5; padding-top: 20px; }
 </style>
 </head>
 <body>
+  <div class="logo-wrap"><img class="logo" src="sonatrach_logo.png" alt="Logo"></div>
+  <a class="back-link" href="index.html">‹ Retour</a>
+  <h1 class="main-title">RÈGLEMENT INTÉRIEUR</h1>
+  <p class="subtitle">SONATRACH / IAP 2026</p>
+  <div class="divider"></div>
 
-  <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
-  <div class="logo-wrap"><img class="logo" src="sonatrach_logo.png" alt="Sonatrach Logo"></div>
+  <!-- I. INTRODUCTION -->
+  <h2 class="section-title collapsible" onclick="toggleSection(this)"><span>I. INTRODUCTION</span><span class="chevron">▶</span></h2>
+  <div class="collapsible-content">
+    <div class="card"><p>Votre passage en vue d'une formation à l'IAP vise à vous faire acquérir des connaissances...</p></div>
+  </div>
+  <!-- II. VOLET PÉDAGOGIE -->
+  <h2 class="section-title collapsible" onclick="toggleSection(this)"><span>II. VOLET PÉDAGOGIE</span><span class="chevron">▶</span></h2>
+  <div class="collapsible-content">
+    <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 1</span><span class="chevron">▶</span></h3>
+    <div class="collapsible-content"><div class="card"><p>Formes et modes de formation et d'apprentissage...</p></div></div>
+    <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 2</span><span class="chevron">▶</span></h3>
+    <div class="collapsible-content"><div class="card"><p>Système de formation modulaire...</p></div></div>
+    <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 3</span><span class="chevron">▶</span></h3>
+    <div class="collapsible-content"><div class="card"><p>Mode de déroulement de la formation...</p></div></div>
+  </div>
 
-  <div id="lang-fr">
-    <a class="back-link" href="index.html">‹ Retour</a>
-    <h1 class="main-title">RÈGLEMENT INTÉRIEUR DE L'INSTITUT ALGÉRIEN DU PÉTROLE POUR LES APPRENANTS DES PARCOURS DE FORMATION</h1>
-    <p class="subtitle">SONATRACH / IAP</p><p class="year">2026</p><div class="divider"></div>
+  <!-- III. VOLET DISCIPLINE -->
+  <h2 class="section-title collapsible" onclick="toggleSection(this)"><span>III. VOLET DISCIPLINE GÉNÉRALE</span><span class="chevron">▶</span></h2>
+  <div class="collapsible-content">
+    <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 1 : Assiduité</span><span class="chevron">▶</span></h3>
+    <div class="collapsible-content"><div class="card"><p>Respect des horaires obligatoire.</p></div></div>
+  </div>
 
-    <!-- I. INTRODUCTION -->
-    <h2 class="section-title collapsible" onclick="toggleSection(this)">
-      <span>I. INTRODUCTION</span><span class="chevron">▶</span>
-    </h2>
-    <div class="collapsible-content">
-      <div class="card">
-        <p>Votre passage en vue d'une formation à l'Institut Algérien du Pétrole, IAP, vise à vous faire acquérir des connaissances et développer des compétences qui vous permettront d'être plus performant en poste de travail. Pour cela, vous êtes astreint à la rigueur dans l'application stricte et sans réserve du présent règlement intérieur.</p>
-      </div>
-    </div>
-
-    <!-- II. VOLET PÉDAGOGIE -->
-    <h2 class="section-title collapsible" onclick="toggleSection(this)">
-      <span>II. VOLET PÉDAGOGIE</span><span class="chevron">▶</span>
-    </h2>
-    <div class="collapsible-content">
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 1 : Formes et modes de formation et d'apprentissage</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content">
-        <div class="card">
-          <p>Le contenu de la formation se caractérise par des formations techniques basiques et avancés en mode présentiel ou à distance (e-learning), des travaux de laboratoires, des simulations, des conférences, des séminaires, des formations en poste de travail (OJT) et des travaux d'études personnels. La formation s'articule autour :</p>
-          <ul>
-            <li>D'une formation sous forme de cours ou de conférences en groupes restreints permettant une participation optimale de l'apprenant ;</li>
-            <li>D'une réalisation de travaux personnels théoriques et pratiques en complément de l'enseignement reçu ;</li>
-            <li>De programmation de visites industrielles et de stages pratiques ;</li>
-            <li>D'une consultation accrue du Formateur par les apprenants ;</li>
-            <li>D'un apprentissage à distance via une plateforme e-learning ou des visioconférences.</li>
-          </ul>
-        </div>
-      </div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 2 : Système de formation</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content">
-        <div class="card">
-          <p>Le système de formation est modulaire pour les parcours longue durée. Les modules sont définis par un programme de formation conçu conjointement par l'IAP et la structure de rattachement de l'apprenant. Ce programme de formation est validé par la direction en charge de la Pédagogie au niveau de l'IAP. Les formations de courtes durées et séminaires sont proposés et offerts sur l'ERP.</p>
-        </div>
-      </div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 3 : Mode de déroulement de la formation</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content">
-        <div class="card">
-          <p>Un programme de formation est un ensemble de phases regroupant plusieurs enseignements théoriques et/ou pratiques, des stages, et/ou une mise en situation professionnelle.</p>
-          <p>Un module est un ensemble de cours théoriques et/ou pratiques dont le volume horaire est de 12 heures au moins. Plusieurs modules peuvent former un parcours de formation.</p>
-          <p>Les modules sont dispensés en séance d'une durée de 1H30 suivi d'une pause de 15 minutes maximum.</p>
-          <p>La journée est organisée en quatre séances. Les horaires sont définis par la Sous-Direction des Études de l'École.</p>
-          <p>Le volume horaire hebdomadaire moyen alloué à la formation est complet.</p>
-        </div>
-      </div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 4 : Évaluation de la Formation</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>L'évaluation des connaissances comprend des contrôles continus, des examens modulaires et l'évaluation des stages pratiques.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 5 : Pondération des modules</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>Chaque module est affecté d'un coefficient proportionnel à sa charge horaire et son importance dans le parcours.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 6 : Projet de fin de formation de professionnalisation</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>Les apprenants rédigent un rapport de fin de formation soutenu devant un jury d'experts désignés.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 7 : Moyenne de fin de formation de professionnalisation</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>La moyenne générale est calculée sur la base des notes modulaires obtenues et de la note de soutenance.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 8 : Barème des Mentions retenues</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>Les mentions (Passable, Assez Bien, Bien, Très Bien) sont attribuées selon les seuils de notes définis par l'IAP.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 9 : Analyse des résultats et décision du jury</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>Le jury souverain valide les résultats finaux et délibère sur l'attribution des attestations de succès.</p></div></div>
-
-      <h3 class="article-title collapsible" onclick="toggleSection(this)"><span>ARTICLE 10 : Organisation du conseil pédagogique école</span><span class="chevron">▶</span></h3>
-      <div class="collapsible-content"><div class="card"><p>Le conseil pédagogique se réunit périodiquement pour suivre l'avancement et la qualité des enseignements.</p></div></div>
-
+  <footer>IAP – Institut Algérien du Pétrole</footer>
+  <script>
+    function toggleSection(h) { h.classList.toggle('active-header'); const c = h.nextElementSibling; c.style.display = c.style.display === 'block' ? 'none' : 'block'; }
+  </script>
+</body>
+</html>
