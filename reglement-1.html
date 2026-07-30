@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Règlement Intérieur IAP</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 30px 22px 70px;
+    color: #2b2f36;
+    background: #faf8f4;
+    line-height: 1.8;
+    font-size: 1.02rem;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 25px;
+    color: #0d3b66;
+    background: #eef2f6;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 9px 16px;
+    border-radius: 999px;
+    transition: background 0.15s ease;
+  }
+  .back-link:hover { background: #e2e8f0; }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+  }
+  .top-bar .back-link { margin-bottom: 0; }
+  #langBtn {
+    background: #0d3b66;
+    color: #fff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(13, 59, 102, 0.2);
+    transition: background 0.15s ease;
+  }
+  #langBtn:hover { background: #123a6b; }
+  h1.main-title {
+    color: #0d3b66;
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    letter-spacing: 0.2px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #d9730d;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  .year {
+    text-align: center;
+    color: #8a8f98;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+  }
+  .divider {
+    width: 80px;
+    height: 4px;
+    background: #f0a13a;
+    border-radius: 2px;
+    margin: 0 auto 35px;
+  }
+  h2.section-title {
+    color: #0d3b66;
+    background: #eef2f6;
+    border-left: 6px solid #0d3b66;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 22px;
+  }
+  h3.article-title {
+    color: #0d3b66;
+    border-bottom: 2px solid #f0a13a;
+    padding-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 14px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #eef0f2;
+    border-left: 4px solid #f0a13a;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(13, 59, 102, 0.05);
+    margin-bottom: 18px;
+  }
+  p { margin: 0 0 12px; }
+  p:last-child { margin-bottom: 0; }
+  ul, ol {
+    margin: 10px 0;
+    padding-left: 22px;
+  }
+  li { margin-bottom: 9px; }
+  li:last-child { margin-bottom: 0; }
+  .formula {
+    background: #fdf3e4;
+    border-left: 4px solid #f0a13a;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #0d3b66;
+    margin: 14px 0;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.92rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: #0d3b66;
+    color: #fff;
+    padding: 11px 10px;
+    text-align: left;
+    font-weight: 700;
+  }
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #edeef0;
+    color: #3a3f47;
+  }
+  tr:nth-child(even) td { background: #f6f8fa; }
+  .mention-tb { color: #b3261e; font-weight: 700; }
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.98rem;
+    color: #0d3b66;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    line-height: 1.7;
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <a class="back-link" href="index.html">‹ <span data-fr="Retour" data-en="Back">Retour</span></a>
+    <button id="langBtn" onclick="toggleLang()">EN</button>
+  </div>
+
+<div id="content-fr">
+
+  <h1 class="main-title">RÈGLEMENT INTÉRIEUR DE L'INSTITUT ALGÉRIEN DU PÉTROLE POUR LES APPRENANTS DES PARCOURS DE FORMATION</h1>
+  <p class="subtitle">SONATRACH / IAP</p>
+  <p class="year">2026</p>
+  <div class="divider"></div>
+
+  <h2 class="section-title">I. INTRODUCTION</h2>
+  <div class="card">
+    <p>Votre passage en vue d'une formation à l'Institut Algérien du Pétrole, IAP, vise à vous faire acquérir des connaissances et développer des compétences qui vous permettront d'être plus performant en poste de travail. Pour cela, vous êtes astreint à la rigueur dans l'application stricte et sans réserve du présent règlement intérieur.</p>
+  </div>
+
+  <h2 class="section-title">II. VOLET PÉDAGOGIE</h2>
+
+  <h3 class="article-title">ARTICLE 1 : Formes et modes de formation et d'apprentissage</h3>
+  <div class="card">
+    <p>Le contenu de la formation se caractérise par des formations techniques basiques et avancés en mode présentiel ou à distance (e-learning), des travaux de laboratoires, des simulations, des conférences, des séminaires, des formations en poste de travail (OJT) et des travaux d'études personnels. La formation s'articule autour :</p>
+    <ul>
+      <li>D'une formation sous forme de cours ou de conférences en groupes restreints permettant une participation optimale de l'apprenant ;</li>
+      <li>D'une réalisation de travaux personnels théoriques et pratiques en complément de l'enseignement reçu ;</li>
+      <li>De programmation de visites industrielles et de stages pratiques ;</li>
+      <li>D'une consultation accrue du Formateur par les apprenants ;</li>
+      <li>D'un apprentissage à distance via une plateforme e-learning ou des visioconférences.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2 : Système de formation</h3>
+  <div class="card">
+    <p>Le système de formation est modulaire pour les parcours longue durée. Les modules sont définis par un programme de formation conçu conjointement par l'IAP et la structure de rattachement de l'apprenant. Ce programme de formation est validé par la direction en charge de la Pédagogie au niveau de l'IAP. Les formations de courtes durées et séminaires sont proposés et offerts sur l'ERP.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3 : Mode de déroulement de la formation</h3>
+  <div class="card">
+    <p>Un programme de formation est un ensemble de phases regroupant plusieurs enseignements théoriques et/ou pratiques, des stages, et/ou une mise en situation professionnelle.</p>
+    <p>Un module est un ensemble de cours théoriques et/ou pratiques dont le volume horaire est de 12 heures au moins. Plusieurs modules peuvent former un parcours de formation.</p>
+    <p>Les modules sont dispensés en séance d'une durée de 1H30 suivi d'une pause de 15 minutes maximum.</p>
+    <p>La journée est organisée en quatre séances. Les horaires sont définis par la Sous-Direction des Études de l'École.</p>
+    <p>Le volume horaire hebdomadaire moyen alloué à la formation est compris entre 12 et 30 heures.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4 : Évaluation de la Formation</h3>
+  <div class="card">
+    <p><strong>4-1- Parcours de professionnalisation / de perfectionnement</strong></p>
+    <p>Pour le contrôle des connaissances avant, pendant et à l'issu de chaque action de formation, le mode d'évaluation de chaque unité pédagogique comprend :</p>
+    <ul>
+      <li>Un contrôle continu des connaissances réalisé par des tests courts écrits ou oraux,</li>
+      <li>Au minimum un test long écrit d'une durée de 1h30,</li>
+      <li>Une évaluation de synthèse écrite couvrant l'ensemble du contenu de l'unité pédagogique.</li>
+    </ul>
+    <p>La moyenne du module est calculée de la façon suivante :</p>
+    <div class="formula">Module = (0,4 EF + 0,6 ES)</div>
+    <p><em>Avec :</em></p>
+    <ul>
+      <li>EF (Évaluation Formative)</li>
+      <li>ES (Évaluation Finale)</li>
+    </ul>
+    <p><strong>4-2- Formation de courte durée, séminaire et autres</strong></p>
+    <p>Une évaluation diagnostique au début et une évaluation des acquis en connaissances et en compétences sont réalisées pour chaque action de formation.</p>
+    <p>La note finale de la Formation de courte durée ou du séminaire est le résultat de l'évaluation des acquis en connaissances et en compétences réalisés à la fin de chaque action de formation ou séminaire.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5 : Pondération des modules</h3>
+  <div class="card">
+    <p>Les coefficients de pondération de tous les modules sont définis lors de la conception de chaque parcours de formation, ils sont communiqués aux apprenants par voie d'affichage avant l'exécution du parcours de formation.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 6 : Projet de fin de formation de professionnalisation</h3>
+  <div class="card">
+    <p>La note du rapport de fin de formation Nr (de 0 à 20) est déterminée comme suit :</p>
+    <div class="formula">Nr = 0,2 N1 + 0,3 N2 + 0,5 N3</div>
+    <p>Avec :</p>
+    <ul>
+      <li>N1 : note du tuteur durant le stage pratique.</li>
+      <li>N2 : note de l'encadreur.</li>
+      <li>N3 : note du jury de soutenance / présentation du rapport.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 7 : Moyenne de fin de formation de professionnalisation</h3>
+  <div class="card">
+    <p>La moyenne générale de la formation est calculée de la façon suivante :</p>
+    <div class="formula">M Générale = 0,75 × [∑ (αi × Ni) / ∑ αi] + 0,25 × Nr</div>
+    <p>Avec :</p>
+    <ul>
+      <li>M Générale : Moyenne générale de la formation</li>
+      <li>Ni : Moyenne du module i</li>
+      <li>αi : Coefficient de pondération du module i</li>
+      <li>Nr : Note du rapport de fin de formation</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 8 : Barème des Mentions retenues</h3>
+  <div class="card">
+    <table>
+      <tr><th>Moyenne Générale (M Générale)</th><th>Mention</th><th>Recommandation</th></tr>
+      <tr><td>M ≥ 16</td><td class="mention-tb">Très bien</td><td>Potentiel élevé repéré</td></tr>
+      <tr><td>14 ≤ M &lt; 16</td><td class="mention-tb">Bien</td><td>Peut prendre fonction en toute autonomie</td></tr>
+      <tr><td>12 ≤ M &lt; 14</td><td class="mention-tb">Assez bien</td><td>Peut prendre fonction sous supervision</td></tr>
+      <tr><td>10 ≤ M &lt; 12</td><td class="mention-tb">Moyen</td><td>Ne peut prendre fonction avant perfectionnement</td></tr>
+      <tr><td>M &lt; 10</td><td class="mention-tb">Insuffisant</td><td>Changement de profil moyennant une formation de reconversion</td></tr>
+    </table>
+  </div>
+
+  <h3 class="article-title">ARTICLE 9 : Analyse des résultats et décision du jury de fin de formation</h3>
+  <div class="card">
+    <p>Les résultats de fin de formation sont analysés au niveau du département pédagogique en charge de l'action de formation. Après analyse, des recommandations de formation complémentaires et d'accompagnement seront recommandés selon les écarts observés. Un écart en compétences techniques est observé si le résultat final du module est inférieur à 12/20 (60%). Le rapport de fin de formation est soumis à la validation du conseil pédagogique de l'école qui sera présenté devant le jury de l'Institut qui prendra ainsi la décision finale.</p>
+    <p>La décision finale et le rapport de fin de formation seront communiqués à la structure d'appartenance de chaque apprenant et à la direction formation & planification de SONATRACH. L'obtention d'une Attestation de Succès de l'Institut Algérien du Pétrole, IAP, est subordonnée à l'obtention des résultats de la fin de formation validé et approuvé par le jury de l'école. À défaut, une Attestation de Participation sera délivrée.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 10 : Organisation du conseil pédagogique école</h3>
+  <div class="card">
+    <p>Le Conseil Pédagogique de l'École est composé de :</p>
+    <ul>
+      <li>Directeur de l'École (Président).</li>
+      <li>Sous-Directeur des Études.</li>
+      <li>Chefs de Départements Pédagogiques.</li>
+      <li>Chef de Département Formation.</li>
+      <li>Deux (02) formateurs de la même spécialité de la promotion.</li>
+    </ul>
+    <p>Le directeur de l'école peut faire appel à toute compétence de l'IAP qu'il juge nécessaire pour les besoins d'analyse et d'examen des résultats de fin de formation.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 11 : Dispositions particulières</h3>
+  <div class="card">
+    <p>Les conditions d'admission et la méthode d'évaluation pour toute formation engagée dans le cadre d'un partenariat avec d'autres institutions de formation sont définies dans la convention ou contrat liant l'IAP au Partenaire.</p>
+  </div>
+
+  <h2 class="section-title">III. VOLET DISCIPLINE GÉNÉRALE</h2>
+
+  <h3 class="article-title">ARTICLE 1 : Assiduité et ponctualité</h3>
+  <div class="card">
+    <ul>
+      <li>Les apprenants sont tenus de respecter rigoureusement les horaires de cours fixés par l'emploi du temps préétabli. Le formateur pourra refuser aux retardataires l'accès aux salles de cours, salles de simulations et laboratoires, et les considérer comme absents.</li>
+      <li>Pendant les heures de cours, les apprenants sont placés sous l'autorité directe des formateurs auxquels ils doivent respect et obéissance.</li>
+      <li>La durée de la pause, entre deux séances, est fixée à 15 minutes au maximum.</li>
+      <li>En cas d'absence du formateur, le chef de groupe doit informer le chef de département pédagogique de rattachement ou à défaut le chef de département Formation. Le groupe doit obligatoirement rester en salle ou au laboratoire et attendre les instructions.</li>
+      <li>Tous les contrôles de connaissances (contrôle continu, test long et évaluations de synthèse), les stages et visites sont obligatoires et toute absence y afférente non justifiée sera sanctionnée par la note de zéro (0). De plus, pour les stages et visites, toute absence non justifiée sera examinée par le Conseil de discipline de l'École qui prononcera une sanction.</li>
+      <li>Tout apprenant totalisant un nombre d'absences non justifiées, égal ou supérieur à dix pour cent (10 %) du volume horaire global d'un module ou, égal ou supérieur à vingt pour cent (20 %) du volume horaire global de l'ensemble des modules réalisés durant une phase de formation, verra son cas soumis au Conseil de discipline de l'École qui prononcera une sanction pouvant aller jusqu'à l'exclusion. Cette sanction est sans recours.</li>
+      <li>Le problème d'absence collective à une séance de Cours, de Travaux Dirigés ou de Travaux Pratiques, ou à une interrogation, sera soumis à l'appréciation du Formateur et du Département Pédagogique. Celui de l'absence collective à un examen sera aussi soumis au Conseil de Discipline.</li>
+      <li>En cas d'absence prévisible, l'apprenant prévient le Chef de Département Pédagogique en présentant un document justificatif.</li>
+      <li>En cas d'absence justifiée à un examen ou un contrôle, l'apprenant est autorisé à rattraper l'épreuve.</li>
+      <li>Tout autre manque d'assiduité caractérisé, constaté par un formateur, sera soumis à l'appréciation du Conseil de Discipline S/C de la voie hiérarchique, par le formateur concerné dans un délai de 48h.</li>
+    </ul>
+
+    <p><strong>Les cas d'absences justifiées sont :</strong></p>
+    <table>
+      <tr><th>Motif d'absences</th><th>Nombre de jours</th><th>Pièces avant le départ</th><th>Pièces au retour</th></tr>
+      <tr><td>Convocation d'organisme officiels</td><td>—</td><td>Convocation</td><td>Convocation d'absence visée par l'autorité qui a convoqué</td></tr>
+      <tr><td>Consultation médicale avec rendez-vous</td><td>—</td><td>Notification de rendez-vous</td><td>Ordonnance ou certificat médical</td></tr>
+      <tr><td>Maladie Imprévue</td><td>—</td><td>Avertir le chef de groupe si possible</td><td>Ordonnance ou certificat médical</td></tr>
+      <tr><td>Congé de maladie</td><td>Suivant le nombre de jours accordés par le médecin assermenté</td><td>—</td><td>Certificat médical remis dans les 48 heures</td></tr>
+      <tr><td>Maladie très grave d'un parent, du conjoint ou d'un enfant</td><td>—</td><td>Télégramme, lettre, certificat médical</td><td>Certificat médical</td></tr>
+      <tr><td>Décès d'un proche</td><td>Suivant la règlementation de l'Entreprise</td><td>—</td><td>Extrait d'acte de décès</td></tr>
+      <tr><td>Mariage</td><td>—</td><td>—</td><td>Certificat de mariage</td></tr>
+      <tr><td>Congé exceptionnel</td><td>Suivant la règlementation de l'Entreprise</td><td>—</td><td>Documents justificatifs</td></tr>
+    </table>
+
+    <ul>
+      <li>Les apprenants concernés par des contrôles médicaux ou actes thérapeutiques continus, peuvent bénéficier d'un régime d'assiduité particulier.</li>
+      <li>Les absences justifiées, devront avoir impérativement l'aval du chef de Département Pédagogique. Lors des absences, définies dans le tableau ci-dessus, la responsabilité de l'IAP est entièrement dégagée.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2 : Hygiène et sécurité</h3>
+  <div class="card">
+    <ul>
+      <li>Les apprenants doivent se munir de leur badge et le présenter à toute réquisition. Un refus de présentation du badge les expose à une sanction.</li>
+      <li>La présence des apprenants dans les salles de cours et laboratoires est formellement interdite au-delà des heures prévues dans l'emploi du temps et de travaux pratiques, sauf autorisation préalable du Chef de Département Pédagogique ou du Chef de Département Formation.</li>
+      <li>L'usage du téléphone portable, caméra, de la cigarette et du café/thé est strictement interdit durant les heures de cours ou de travaux pratiques.</li>
+      <li>Tout incident créé à l'intérieur de l'École les expose à une mesure disciplinaire.</li>
+      <li>En cas d'incidents (incendie, inondation, accident…) les apprenants doivent se conformer aux consignes strictes de sécurité.</li>
+      <li>Les apprenants sont tenus de respecter scrupuleusement la charte informatique de l'Entreprise SONATRACH.</li>
+      <li>Les apprenants doivent respecter les règles d'accès, de circulation et de parking en vigueur à l'École.</li>
+      <li>Les apprenants doivent respecter les règles sanitaires.</li>
+      <li>Les apprenants doivent respecter les règles de la vie collective.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3 : Sauvegarde du patrimoine de l'école</h3>
+  <div class="card">
+    <ul>
+      <li>L'ensemble des équipements pédagogiques mis à la disposition des apprenants sont sous leur entière responsabilité. Il leur appartient d'en prendre soin et de signaler toute dégradation éventuelle.</li>
+      <li>Les graffiti et autres dégradations des murs et des meubles sont formellement interdits.</li>
+      <li>Afin de permettre aux apprenants de compléter leur formation, d'enrichir leurs connaissances et de fournir un travail personnel une bibliothèque est mise à leur disposition. Les apprenants sont tenus de respecter le règlement intérieur de la bibliothèque.</li>
+      <li>Les dégradations ou disparitions de matériels ou d'ouvrages pédagogiques, seront pénalisées en fonction du degré de responsabilité dont l'ampleur est appréciée par le conseil de discipline tel que défini dans l'article 5.</li>
+      <li>La remise du quitus de fin de formation est conditionnée par la restitution de tous les ouvrages, documents et matériels empruntés. Le quitus constitue un préalable à la remise de l'attestation.</li>
+      <li>Durant l'utilisation de la salle informatique les apprenants doivent prendre soin du matériel et signaler immédiatement toute anomalie ou dégradation, et de respecter scrupuleusement la tranquillité de la salle.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4 : Comportement dans l'enceinte de l'école</h3>
+  <div class="card">
+    <ul>
+      <li>Les relations des apprenants avec les autres personnels de l'École devront aussi être empreintes de courtoisie en toutes circonstances.</li>
+      <li>En aucun cas les apprenants n'auront d'ordre à donner aux personnels de service ; de plus, ils devront obtempérer dans le cadre de la réglementation en vigueur aux instructions qui pourraient leur être données.</li>
+      <li>Une tenue correcte (définie par note du Directeur de l'École) est exigée durant la présence des apprenants à l'École. En outre, dans les laboratoires et ateliers, le port de la tenue de travail est obligatoire.</li>
+      <li>Aucun manquement éventuel à ces règles de bonne conduite ne sera toléré.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5 : Discipline générale</h3>
+  <div class="card">
+    <p>Le Conseil de Discipline est composé comme suit :</p>
+    <ul>
+      <li>Le Sous-Directeur des Études (Président),</li>
+      <li>Deux Chefs de Départements Pédagogiques dont le responsable du programme suivi par l'apprenant,</li>
+      <li>Le Chef de Département Formation,</li>
+      <li>Deux Formateurs,</li>
+      <li>Le représentant des apprenants.</li>
+    </ul>
+    <p>Le Conseil de Discipline peut faire appel à toute personne dont le témoignage ou la contribution est jugée nécessaire.</p>
+    <p><strong>Les fautes ci-après sont considérées comme graves et passibles du conseil de discipline :</strong></p>
+    <ul>
+      <li>Récidive de faute ayant déjà entraîné un blâme,</li>
+      <li>Introduction de boissons alcoolisées ou de stupéfiants ou leur consommation dans les locaux de l'institut,</li>
+      <li>État d'ébriété,</li>
+      <li>Refus de composer,</li>
+      <li>Fraude à un examen,</li>
+      <li>Vol,</li>
+      <li>Réclamations collectives,</li>
+      <li>Insubordination caractérisée,</li>
+      <li>Injures ou menaces à l'égard d'un membre du personnel,</li>
+      <li>Rixes et voies de fait,</li>
+      <li>Acte de vandalisme,</li>
+      <li>Port d'objets dangereux,</li>
+      <li>Délit de droit commun,</li>
+      <li>Toute entrave délibérée au bon fonctionnement du régime des études,</li>
+      <li>Hébergement de personnes étrangères à la résidence de l'École, ou plus généralement tout acte ou attitude contraire à l'honneur ou à la probité.</li>
+    </ul>
+    <p>Le Conseil de Discipline est seul juge de la gravité des faits soumis à son jugement. Sa décision est souveraine et non révisable. Le Conseil de Discipline peut prononcer une des sanctions suivantes :</p>
+    <ul>
+      <li>Avertissement Oral</li>
+      <li>Avertissement Écrit</li>
+      <li>Blâme</li>
+      <li>Exclusion de la formation</li>
+    </ul>
+    <p>La sanction du Conseil de Discipline devra être communiquée à la structure d'appartenance de l'apprenant, dans les meilleurs délais.</p>
+  </div>
+
+  <h2 class="section-title">IV. VOLET HÉBERGEMENT</h2>
+
+  <h3 class="article-title">ARTICLE 1</h3>
+  <div class="card">
+    <p>Dès que la chambre et le mobilier sont mis à la disposition de l'apprenant, il lui appartient de contrôler le bon état et de notifier au responsable de la résidence les réserves éventuelles.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2</h3>
+  <div class="card">
+    <p>Le matériel mis à la disposition de l'apprenant est sous sa responsabilité, il n'est pas permis de :</p>
+    <ul>
+      <li>Préparer des repas, de faire de gros lavages, de suspendre du linge aux fenêtres et aux balcons,</li>
+      <li>Modifier l'installation électrique ou de brancher des appareils pouvant occasionner des incidents ou accidents ou une gêne pour les voisins,</li>
+      <li>Toucher, modifier les équipements de sécurité ou entraver leur fonctionnement,</li>
+      <li>Introduire dans les chambres des objets dangereux, et recevoir des personnes étrangères sans l'accord du responsable de la résidence.</li>
+      <li>Introduire dans les chambres des boissons alcoolisées</li>
+      <li>Fumer et de vapoter (utilisation d'une cigarette électronique) à l'intérieur des chambres et des couloirs.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3</h3>
+  <div class="card">
+    <p>Tout changement de chambre ou transfert de mobilier ne peut se faire qu'après avis du responsable de la résidence.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4</h3>
+  <div class="card">
+    <p>Le résident est tenu de veiller à l'hygiène, la sécurité et la tranquillité de son environnement.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5</h3>
+  <div class="card">
+    <p>Les résidents assument l'entière responsabilité des objets qui leur appartiennent.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 6</h3>
+  <div class="card">
+    <p>Dans le cas où les apprenants sont hébergés en dehors de la résidence IAP, ils sont tenus de respecter le règlement intérieur en vigueur au sein du lieu d'hébergement.</p>
+  </div>
+
+  <h2 class="section-title">V. DOSSIER APPRENANTS FORMATION LONGUE DURÉE</h2>
+  <div class="card">
+    <ul>
+      <li>Copie du diplôme</li>
+      <li>Acte de naissance</li>
+      <li>02 photos (le nom et prénom porte sur le dos de la photo)</li>
+      <li>Copie de la pièce d'identité</li>
+      <li>Engagement signé</li>
+      <li>Résidence</li>
+    </ul>
+  </div>
+
+  <footer>
+    IAP – Institut Algérien du Pétrole<br>
+    IAP - Algerian Petroleum institute
+  </footer>
+
+</div>
+
+<div id="content-en" style="display:none">
+
+  <h1 class="main-title">INTERNAL REGULATIONS OF THE ALGERIAN PETROLEUM INSTITUTE FOR TRAINEES IN TRAINING PROGRAMS</h1>
+  <p class="subtitle">SONATRACH / IAP</p>
+  <p class="year">2026</p>
+  <div class="divider"></div>
+
+  <h2 class="section-title">I. INTRODUCTION</h2>
+  <div class="card">
+    <p>Your enrollment for training at the Algerian Petroleum Institute (IAP) is intended to help you acquire knowledge and develop skills that will make you more effective in your job. To this end, you are required to apply these internal regulations rigorously, strictly, and without reservation.</p>
+  </div>
+
+  <h2 class="section-title">II. TRAINING &amp; PEDAGOGY</h2>
+
+  <h3 class="article-title">ARTICLE 1: Forms and Modes of Training and Learning</h3>
+  <div class="card">
+    <p>The training content consists of basic and advanced technical training delivered in person or remotely (e-learning), laboratory work, simulations, conferences, seminars, on-the-job training (OJT), and personal study work. Training is structured around:</p>
+    <ul>
+      <li>Courses or lectures in small groups allowing optimal participation of the trainee;</li>
+      <li>Personal theoretical and practical work supplementing the instruction received;</li>
+      <li>Scheduled industrial visits and practical internships;</li>
+      <li>Increased consultation of the trainer by trainees;</li>
+      <li>Distance learning via an e-learning platform or video conferencing.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2: Training System</h3>
+  <div class="card">
+    <p>The training system is modular for long-term programs. Modules are defined by a training program designed jointly by the IAP and the trainee's home structure. This training program is validated by the department in charge of pedagogy at the IAP. Short-term training courses and seminars are proposed and offered on the ERP.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3: Training Delivery Method</h3>
+  <div class="card">
+    <p>A training program is a set of phases grouping several theoretical and/or practical lessons, internships, and/or professional simulation exercises.</p>
+    <p>A module is a set of theoretical and/or practical courses with a workload of at least 12 hours. Several modules may form a training program.</p>
+    <p>Modules are delivered in sessions of 1h30, followed by a break of 15 minutes maximum.</p>
+    <p>The day is organized into four sessions. Schedules are set by the School's Deputy Directorate of Studies.</p>
+    <p>The average weekly workload allocated to training is between 12 and 30 hours.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4: Training Evaluation</h3>
+  <div class="card">
+    <p><strong>4-1- Professionalization / Skills Development Programs</strong></p>
+    <p>For assessing knowledge before, during, and at the end of each training action, the evaluation method for each educational unit includes:</p>
+    <ul>
+      <li>Continuous assessment through short written or oral tests,</li>
+      <li>At least one long written test lasting 1h30,</li>
+      <li>A written summary assessment covering the entire content of the educational unit.</li>
+    </ul>
+    <p>The module average is calculated as follows:</p>
+    <div class="formula">Module = (0.4 EF + 0.6 ES)</div>
+    <p><em>Where:</em></p>
+    <ul>
+      <li>EF (Formative Evaluation)</li>
+      <li>ES (Final Evaluation)</li>
+    </ul>
+    <p><strong>4-2- Short-Term Training, Seminars and Others</strong></p>
+    <p>A diagnostic evaluation at the start and an assessment of knowledge and skills acquired are conducted for each training action.</p>
+    <p>The final grade for short-term training or a seminar results from the evaluation of knowledge and skills acquired at the end of each training action or seminar.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5: Module Weighting</h3>
+  <div class="card">
+    <p>The weighting coefficients of all modules are defined when designing each training program and are communicated to trainees by posting before the program begins.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 6: Professionalization Final Project</h3>
+  <div class="card">
+    <p>The final report grade Nr (from 0 to 20) is determined as follows:</p>
+    <div class="formula">Nr = 0.2 N1 + 0.3 N2 + 0.5 N3</div>
+    <p>Where:</p>
+    <ul>
+      <li>N1: supervisor's grade during the practical internship.</li>
+      <li>N2: mentor's grade.</li>
+      <li>N3: defense/report presentation jury grade.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 7: Professionalization Final Overall Average</h3>
+  <div class="card">
+    <p>The overall training average is calculated as follows:</p>
+    <div class="formula">Overall Average = 0.75 × [∑ (αi × Ni) / ∑ αi] + 0.25 × Nr</div>
+    <p>Where:</p>
+    <ul>
+      <li>Overall Average: overall training average</li>
+      <li>Ni: average of module i</li>
+      <li>αi: weighting coefficient of module i</li>
+      <li>Nr: final report grade</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 8: Grading Scale</h3>
+  <div class="card">
+    <table>
+      <tr><th>Overall Average</th><th>Grade</th><th>Recommendation</th></tr>
+      <tr><td>M ≥ 16</td><td class="mention-tb">Excellent</td><td>High potential identified</td></tr>
+      <tr><td>14 ≤ M &lt; 16</td><td class="mention-tb">Good</td><td>May take up the role fully autonomously</td></tr>
+      <tr><td>12 ≤ M &lt; 14</td><td class="mention-tb">Fairly Good</td><td>May take up the role under supervision</td></tr>
+      <tr><td>10 ≤ M &lt; 12</td><td class="mention-tb">Average</td><td>Cannot take up the role before further training</td></tr>
+      <tr><td>M &lt; 10</td><td class="mention-tb">Insufficient</td><td>Profile change through a conversion training program</td></tr>
+    </table>
+  </div>
+
+  <h3 class="article-title">ARTICLE 9: Results Analysis and Final Jury Decision</h3>
+  <div class="card">
+    <p>End-of-training results are analyzed by the pedagogical department in charge of the training action. Following this analysis, recommendations for further training and support will be made based on any gaps observed. A gap in technical skills is identified if the final module result is below 12/20 (60%). The end-of-training report is submitted for validation by the school's pedagogical council, then presented to the Institute's jury, which will make the final decision.</p>
+    <p>The final decision and the end-of-training report will be communicated to each trainee's home structure and to SONATRACH's training &amp; planning department. Obtaining a Certificate of Success from the Algerian Petroleum Institute (IAP) is conditional on end-of-training results being validated and approved by the school's jury. Otherwise, a Certificate of Participation will be issued.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 10: Organization of the School's Pedagogical Council</h3>
+  <div class="card">
+    <p>The School's Pedagogical Council is composed of:</p>
+    <ul>
+      <li>Director of the School (Chair).</li>
+      <li>Deputy Director of Studies.</li>
+      <li>Heads of Pedagogical Departments.</li>
+      <li>Head of Training Department.</li>
+      <li>Two (02) trainers from the same specialty as the class.</li>
+    </ul>
+    <p>The school's director may call upon any IAP expertise deemed necessary for analyzing and reviewing end-of-training results.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 11: Special Provisions</h3>
+  <div class="card">
+    <p>Admission conditions and the evaluation method for any training carried out under a partnership with other training institutions are defined in the agreement or contract binding the IAP to the Partner.</p>
+  </div>
+
+  <h2 class="section-title">III. GENERAL DISCIPLINE</h2>
+
+  <h3 class="article-title">ARTICLE 1: Attendance and Punctuality</h3>
+  <div class="card">
+    <ul>
+      <li>Trainees must strictly comply with the course schedule set in the pre-established timetable. The trainer may deny latecomers access to classrooms, simulation rooms, and laboratories, and count them as absent.</li>
+      <li>During class hours, trainees are placed under the direct authority of the trainers, whom they must respect and obey.</li>
+      <li>The break between two sessions is set at 15 minutes maximum.</li>
+      <li>In the event of a trainer's absence, the group leader must inform the relevant head of pedagogical department, or failing that, the head of the training department. The group must remain in the classroom or laboratory and await instructions.</li>
+      <li>All knowledge assessments (continuous assessment, long test, and summary evaluations), internships, and visits are mandatory, and any unjustified absence will be penalized with a grade of zero (0). Additionally, for internships and visits, any unjustified absence will be reviewed by the School's Disciplinary Council, which will impose a sanction.</li>
+      <li>Any trainee accumulating unjustified absences equal to or exceeding ten percent (10%) of the total workload of a module, or equal to or exceeding twenty percent (20%) of the total workload of all modules completed during a training phase, will have their case submitted to the School's Disciplinary Council, which may impose a sanction up to and including exclusion. This sanction is final and without appeal.</li>
+      <li>A collective absence issue during a lecture, tutorial, or practical session, or during a test, will be assessed by the trainer and the pedagogical department. Collective absence from an exam will also be submitted to the Disciplinary Council.</li>
+      <li>In the event of a foreseeable absence, the trainee must notify the head of pedagogical department by presenting a supporting document.</li>
+      <li>In the event of a justified absence from an exam or assessment, the trainee is authorized to retake the test.</li>
+      <li>Any other clear lack of diligence noted by a trainer will be submitted, through the hierarchical channel, to the assessment of the Disciplinary Council by the trainer concerned within 48 hours.</li>
+    </ul>
+
+    <p><strong>Justified absences are as follows:</strong></p>
+    <table>
+      <tr><th>Reason for absence</th><th>Number of days</th><th>Documents before departure</th><th>Documents upon return</th></tr>
+      <tr><td>Summons from an official body</td><td>—</td><td>Summons notice</td><td>Absence notice endorsed by the summoning authority</td></tr>
+      <tr><td>Scheduled medical consultation</td><td>—</td><td>Appointment notification</td><td>Medical prescription or certificate</td></tr>
+      <tr><td>Unforeseen illness</td><td>—</td><td>Notify group leader if possible</td><td>Medical prescription or certificate</td></tr>
+      <tr><td>Sick leave</td><td>According to the number of days granted by the certified physician</td><td>—</td><td>Medical certificate submitted within 48 hours</td></tr>
+      <tr><td>Serious illness of a parent, spouse, or child</td><td>—</td><td>Telegram, letter, medical certificate</td><td>Medical certificate</td></tr>
+      <tr><td>Death of a relative</td><td>According to Company regulations</td><td>—</td><td>Death certificate excerpt</td></tr>
+      <tr><td>Marriage</td><td>—</td><td>—</td><td>Marriage certificate</td></tr>
+      <tr><td>Exceptional leave</td><td>According to Company regulations</td><td>—</td><td>Supporting documents</td></tr>
+    </table>
+
+    <ul>
+      <li>Trainees undergoing ongoing medical checks or therapeutic treatment may benefit from a special attendance arrangement.</li>
+      <li>Justified absences must have the prior approval of the head of the Pedagogical Department. For absences defined in the table above, the IAP bears no responsibility whatsoever.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2: Health and Safety</h3>
+  <div class="card">
+    <ul>
+      <li>Trainees must carry their badge and present it upon any request. Refusal to present the badge exposes them to a sanction.</li>
+      <li>The presence of trainees in classrooms and laboratories is strictly prohibited outside the hours set in the timetable and practical work schedule, except with prior authorization from the Head of Pedagogical Department or the Head of Training Department.</li>
+      <li>The use of mobile phones, cameras, cigarettes, and coffee/tea is strictly prohibited during class hours or practical work.</li>
+      <li>Any incident caused within the School exposes trainees to a disciplinary measure.</li>
+      <li>In the event of incidents (fire, flooding, accident, etc.), trainees must comply with strict safety instructions.</li>
+      <li>Trainees must scrupulously comply with SONATRACH's IT charter.</li>
+      <li>Trainees must comply with the School's access, traffic, and parking rules.</li>
+      <li>Trainees must comply with health rules.</li>
+      <li>Trainees must comply with the rules of communal living.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3: Protection of School Property</h3>
+  <div class="card">
+    <ul>
+      <li>All educational equipment made available to trainees is under their full responsibility. It is their duty to take care of it and report any damage.</li>
+      <li>Graffiti and other damage to walls and furniture are strictly prohibited.</li>
+      <li>To allow trainees to complete their training, expand their knowledge, and carry out personal work, a library is made available to them. Trainees must comply with the library's internal regulations.</li>
+      <li>Damage to or loss of equipment or educational materials will be penalized according to the degree of responsibility, the extent of which is assessed by the Disciplinary Council as defined in Article 5.</li>
+      <li>Issuance of the end-of-training clearance is conditional upon the return of all books, documents, and equipment borrowed. This clearance is a prerequisite for issuing the certificate.</li>
+      <li>While using the computer room, trainees must take care of the equipment, immediately report any anomaly or damage, and scrupulously respect the quiet of the room.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4: Conduct on School Premises</h3>
+  <div class="card">
+    <ul>
+      <li>Trainees' relations with other School staff must also be marked by courtesy under all circumstances.</li>
+      <li>Under no circumstances may trainees give orders to service staff; moreover, they must comply, within the applicable regulations, with any instructions given to them.</li>
+      <li>Proper attire (as defined by a note from the School Director) is required while trainees are present at the School. In addition, wearing work attire is mandatory in laboratories and workshops.</li>
+      <li>No failure to observe these rules of good conduct will be tolerated.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5: General Discipline</h3>
+  <div class="card">
+    <p>The Disciplinary Council is composed as follows:</p>
+    <ul>
+      <li>The Deputy Director of Studies (Chair),</li>
+      <li>Two Heads of Pedagogical Departments, including the one responsible for the trainee's program,</li>
+      <li>The Head of the Training Department,</li>
+      <li>Two Trainers,</li>
+      <li>The trainees' representative.</li>
+    </ul>
+    <p>The Disciplinary Council may call upon any person whose testimony or input is deemed necessary.</p>
+    <p><strong>The following offenses are considered serious and subject to the disciplinary council:</strong></p>
+    <ul>
+      <li>Repeat offense after a prior reprimand,</li>
+      <li>Bringing in or consuming alcoholic beverages or narcotics on the institute's premises,</li>
+      <li>State of intoxication,</li>
+      <li>Refusal to sit an exam,</li>
+      <li>Cheating on an exam,</li>
+      <li>Theft,</li>
+      <li>Collective complaints,</li>
+      <li>Blatant insubordination,</li>
+      <li>Insults or threats toward a staff member,</li>
+      <li>Fighting and assault,</li>
+      <li>Vandalism,</li>
+      <li>Carrying dangerous objects,</li>
+      <li>Common law offense,</li>
+      <li>Any deliberate obstruction to the proper functioning of the study system,</li>
+      <li>Housing persons unrelated to the School's residence, or more generally any act or attitude contrary to honor or integrity.</li>
+    </ul>
+    <p>The Disciplinary Council is the sole judge of the seriousness of the facts submitted to it. Its decision is final and not subject to appeal. The Disciplinary Council may impose one of the following sanctions:</p>
+    <ul>
+      <li>Oral Warning</li>
+      <li>Written Warning</li>
+      <li>Reprimand</li>
+      <li>Exclusion from the training</li>
+    </ul>
+    <p>The Disciplinary Council's sanction shall be communicated to the trainee's home structure as soon as possible.</p>
+  </div>
+
+  <h2 class="section-title">IV. ACCOMMODATION</h2>
+
+  <h3 class="article-title">ARTICLE 1</h3>
+  <div class="card">
+    <p>As soon as the room and furniture are made available to the trainee, it is their responsibility to check their condition and notify the residence manager of any observations.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 2</h3>
+  <div class="card">
+    <p>Equipment made available to the trainee is under their responsibility. It is not permitted to:</p>
+    <ul>
+      <li>Prepare meals, do heavy laundry, or hang laundry from windows and balconies,</li>
+      <li>Modify the electrical installation or connect devices that could cause incidents, accidents, or disturbance to neighbors,</li>
+      <li>Touch or modify safety equipment or interfere with its operation,</li>
+      <li>Bring dangerous objects into rooms, or receive outside visitors without the residence manager's consent.</li>
+      <li>Bring alcoholic beverages into rooms</li>
+      <li>Smoke or vape (use an electronic cigarette) inside rooms and hallways.</li>
+    </ul>
+  </div>
+
+  <h3 class="article-title">ARTICLE 3</h3>
+  <div class="card">
+    <p>Any room change or furniture transfer may only be carried out with the residence manager's approval.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 4</h3>
+  <div class="card">
+    <p>Residents must ensure the hygiene, safety, and tranquility of their environment.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 5</h3>
+  <div class="card">
+    <p>Residents assume full responsibility for their personal belongings.</p>
+  </div>
+
+  <h3 class="article-title">ARTICLE 6</h3>
+  <div class="card">
+    <p>Where trainees are housed outside the IAP residence, they must comply with the internal regulations in force at the place of accommodation.</p>
+  </div>
+
+  <h2 class="section-title">V. LONG-TERM TRAINEE FILE</h2>
+  <div class="card">
+    <ul>
+      <li>Copy of diploma</li>
+      <li>Birth certificate</li>
+      <li>02 photos (name and surname written on the back of the photo)</li>
+      <li>Copy of ID document</li>
+      <li>Signed commitment</li>
+      <li>Residence</li>
+    </ul>
+  </div>
+
+  <footer>
+    IAP – Institut Algérien du Pétrole<br>
+    IAP - Algerian Petroleum institute
+  </footer>
+
+</div>
+
+  <a class="back-link" href="index.html">‹ <span data-fr="Retour à l'accueil" data-en="Back to home">Retour à l'accueil</span></a>
+
+<script>
+  function applyStaticLabels(lang) {
+    document.querySelectorAll('[data-fr]').forEach(function (el) {
+      el.textContent = lang === 'en' ? el.dataset.en : el.dataset.fr;
+    });
+  }
+  function setLang(lang) {
+    document.getElementById('content-fr').style.display = lang === 'fr' ? 'block' : 'none';
+    document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+    document.getElementById('langBtn').textContent = lang === 'fr' ? 'EN' : 'FR';
+    document.documentElement.lang = lang;
+    applyStaticLabels(lang);
+    try { localStorage.setItem('iap_lang', lang); } catch (e) {}
+  }
+  function toggleLang() {
+    var current = document.getElementById('content-fr').style.display !== 'none' ? 'fr' : 'en';
+    setLang(current === 'fr' ? 'en' : 'fr');
+  }
+  (function init() {
+    var saved = 'fr';
+    try { saved = localStorage.getItem('iap_lang') || 'fr'; } catch (e) {}
+    setLang(saved);
+  })();
+</script>
+
+</body>
+</html>
