@@ -292,7 +292,44 @@ img[src^="data:image/png;base64"] {
 }
 </style>
 
+
+<style id="pdf-button-refinement">
+.printable-section{margin:45px auto 30px;padding:38px 28px 42px;max-width:900px;background:#fff7e9;border:2px dashed #e5b65f;border-radius:24px;text-align:center}
+.printable-section h2{margin:0 0 28px;color:#174674;font-size:clamp(22px,4vw,34px);line-height:1.3;font-weight:700}
+.pdf-download-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:auto;min-height:0;max-width:100%;padding:16px 28px;background:#ff9d00;color:#174674;border-radius:45px;text-decoration:none;font-size:clamp(16px,2.8vw,22px);font-weight:700;line-height:1.35;box-shadow:0 7px 18px rgba(255,157,0,.18)}
+.pdf-icon{font-size:1.05em}
+@media(max-width:600px){.printable-section{margin:35px 16px 25px;padding:30px 18px 34px}.pdf-download-button{padding:13px 20px;font-size:17px;gap:8px}}
+</style>
+
 </head>
+
+<div id="reading-progress"></div>
+<div class="reading-tools">
+  <div class="reading-search">
+    <span>⌕</span>
+    <input id="articleSearch" type="search" placeholder="Rechercher dans le règlement..." autocomplete="off">
+    <button id="clearSearch" type="button">×</button>
+  </div>
+  <button id="nightModeBtn" class="tool-btn" type="button">☾</button>
+</div>
+<style id="reading-tools-style">
+#reading-progress{position:fixed;top:0;left:0;width:0;height:4px;background:#ff9d00;z-index:99999}
+.reading-tools{position:fixed;top:10px;right:12px;z-index:9998;display:flex;gap:8px;align-items:center}
+.reading-search{display:flex;align-items:center;width:min(320px,55vw);background:rgba(255,255,255,.97);border:1px solid #ddd;border-radius:24px;box-shadow:0 4px 14px rgba(0,0,0,.12);padding:4px 8px 4px 12px}
+.reading-search span{font-size:20px;color:#174674}
+.reading-search input{border:0;outline:0;background:transparent;width:100%;padding:7px 8px;font-size:14px;color:#17324d}
+.reading-search button{border:0;background:transparent;color:#777;font-size:20px;cursor:pointer}
+.tool-btn{width:42px;height:42px;border:0;border-radius:50%;background:#174674;color:#fff;cursor:pointer;font-size:20px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.search-hidden{display:none!important}
+.search-match{outline:3px solid rgba(255,157,0,.45)!important;scroll-margin-top:80px}
+body.night-mode{background:#111827!important;color:#e5e7eb!important}
+body.night-mode .card,body.night-mode .reading-search,body.night-mode .printable-section{background:#1f2937!important;color:#e5e7eb!important}
+body.night-mode .article-title,body.night-mode h1,body.night-mode h2,body.night-mode h3{color:#fbbf24!important}
+body.night-mode .reading-search input{color:#fff}
+body.night-mode .tool-btn{background:#ff9d00;color:#17324d}
+@media(max-width:600px){.reading-tools{top:8px;right:8px;left:8px;justify-content:flex-end}.reading-search{width:min(260px,calc(100vw - 62px))}}
+</style>
+
 <body>
 
   <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
@@ -1029,6 +1066,68 @@ document.querySelectorAll('.section').forEach(section => {
 .pdf-icon{font-size:1em;flex:0 0 auto}
 @media(max-width:600px){.printable-section{margin:40px 20px 25px;padding:38px 18px 45px;border-radius:22px}.printable-section h2{margin-bottom:30px}.pdf-download-button{min-height:130px;padding:22px 18px;border-radius:65px;gap:10px}}
 </style>
+
+
+<script id="enhanced-reading-features">
+document.addEventListener('DOMContentLoaded', function(){
+  // True accordion: all articles closed first, then Article 1 opens in each section.
+  document.querySelectorAll('.article-title').forEach(function(title){
+    const card=title.nextElementSibling;
+    if(!card) return;
+    card.style.display='none';
+    title.classList.remove('active');
+    title.addEventListener('click',function(){
+      const open=card.style.display==='block';
+      card.style.display=open?'none':'block';
+      title.classList.toggle('active',!open);
+    });
+  });
+  document.querySelectorAll('.section').forEach(function(section){
+    const first=section.querySelector('.article-title');
+    if(first && first.nextElementSibling){
+      first.nextElementSibling.style.display='block';
+      first.classList.add('active');
+    }
+  });
+
+  // Reading progress.
+  function progress(){
+    const d=document.documentElement, max=d.scrollHeight-window.innerHeight;
+    document.getElementById('reading-progress').style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+  }
+  addEventListener('scroll',progress,{passive:true});
+  addEventListener('resize',progress);
+  progress();
+
+  // Fast internal search.
+  const search=document.getElementById('articleSearch'), clear=document.getElementById('clearSearch');
+  function doSearch(){
+    const q=(search.value||'').trim().toLowerCase();
+    document.querySelectorAll('.article-title').forEach(function(title){
+      const card=title.nextElementSibling;
+      const text=((title.innerText||'')+' '+(card?card.innerText:'')).toLowerCase();
+      const match=!q||text.includes(q);
+      title.classList.toggle('search-hidden',!match);
+      if(card) card.classList.toggle('search-hidden',!match);
+      title.classList.toggle('search-match',!!q&&match);
+      if(q&&match&&card){card.style.display='block';title.classList.add('active');}
+    });
+  }
+  if(search) search.addEventListener('input',doSearch);
+  if(clear) clear.addEventListener('click',function(){search.value='';doSearch();search.focus();});
+
+  // Night mode.
+  const btn=document.getElementById('nightModeBtn');
+  if(localStorage.getItem('iap-night-mode')==='1') document.body.classList.add('night-mode');
+  function sync(){btn.textContent=document.body.classList.contains('night-mode')?'☀':'☾';}
+  sync();
+  if(btn) btn.addEventListener('click',function(){
+    document.body.classList.toggle('night-mode');
+    localStorage.setItem('iap-night-mode',document.body.classList.contains('night-mode')?'1':'0');
+    sync();
+  });
+});
+</script>
 
 </body>
 </html>
