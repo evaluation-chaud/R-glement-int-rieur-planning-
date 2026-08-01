@@ -290,41 +290,6 @@
     flex-shrink:0;
   }
 
-  .duration-block{ margin-bottom:26px; }
-  .duration-row{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    margin-bottom:8px;
-  }
-  .duration-label{
-    font-size:12.5px;
-    font-weight:600;
-    color:var(--ink-soft);
-    text-transform:uppercase;
-    letter-spacing:.06em;
-  }
-  .duration-value{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:13.5px;
-    font-weight:700;
-    color:var(--navy);
-  }
-  .duration-track{
-    position:relative;
-    height:6px;
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:4px;
-    overflow:hidden;
-  }
-  .duration-fill{
-    position:absolute;
-    inset:0 auto 0 0;
-    background:linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
-    border-radius:4px;
-  }
-
   .spec-sheet{
     border-top:1px dashed var(--line);
   }
@@ -905,15 +870,6 @@ function buildSelectOptions(lang) {
   });
 }
 
-function getMaxDuree(lang) {
-  let max = 0;
-  Object.values(DONNEES_PROGRAMMES).forEach(entry => {
-    const n = parseFloat(String(entry[lang].duree).replace(/[^\d.]/g, '')) || 0;
-    if (n > max) max = n;
-  });
-  return max || 1;
-}
-
 function splitSpec(line) {
   const idx = line.indexOf(':');
   if (idx === -1) return { label: line, value: '' };
@@ -959,13 +915,17 @@ function renderResult(lang) {
     return;
   }
   const data = DONNEES_PROGRAMMES[currentSpecialiteKey][lang];
-  const dureeNum = parseFloat(String(data.duree).replace(/[^\d.]/g, '')) || 0;
-  const pct = Math.max(4, Math.min(100, Math.round((dureeNum / getMaxDuree(lang)) * 100)));
 
-  const specRows = data.modules.map(line => {
-    const { label, value } = splitSpec(line);
-    return `<div class="spec-row"><span class="spec-label">${label}</span><span class="spec-value">${value}</span></div>`;
-  }).join('');
+  const HIDDEN_LABELS = [
+    "Sessions organisées", "Sessions held",
+    "Capacité cumulée", "Total capacity"
+  ];
+
+  const specRows = data.modules
+    .map(line => splitSpec(line))
+    .filter(({ label }) => !HIDDEN_LABELS.includes(label))
+    .map(({ label, value }) => `<div class="spec-row"><span class="spec-label">${label}</span><span class="spec-value">${value}</span></div>`)
+    .join('');
 
   const typeLabels = {
     fr: { module: "Module", stage: "Stage pratique", conge: "Congé", reprise: "Reprise" },
@@ -1011,13 +971,6 @@ function renderResult(lang) {
       <span class="result-eyebrow">${UI[lang].niveauLabel}</span>
       <h2>${data.nom}</h2>
       <span class="dept-chip">${data.niveau}</span>
-    </div>
-    <div class="duration-block">
-      <div class="duration-row">
-        <span class="duration-label">${UI[lang].durationLabel}</span>
-        <span class="duration-value">${data.duree}</span>
-      </div>
-      <div class="duration-track"><div class="duration-fill" style="width:${pct}%"></div></div>
     </div>
     <div class="spec-sheet">${specRows}</div>
     ${programBlock}
